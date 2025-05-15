@@ -70,12 +70,19 @@
       cursor: pointer;
     }
 
+    .main-image-wrapper {
+      text-align: center;
+      margin: 0; /* Boşluk kaldırıldı */
+      padding-bottom: 40px; /* İstersen burada ufak boşluk verebilirsin */
+    }
+
     .main-image {
-      display: block;
-      margin: 100px auto 80px;
-      max-width: 90%;
+      max-width: 900px; /* container max-width ile uyumlu */
+      width: 100%;
       border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      display: block;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -176,11 +183,8 @@
     </section>
   </div>
 
-  <!-- Yazı ile görsel arasında boşluk -->
-  <div style="height: 150px;"></div>
-
   <!-- Ana görsel -->
-  <div style="text-align: center; margin-bottom: 100px;">
+  <div class="main-image-wrapper">
     <img src="signal-2025-05-15-113519_002.jpeg" alt="Ana Görsel" class="main-image" />
   </div>
 
@@ -225,6 +229,3 @@
   </script>
 </body>
 </html>
-
-
-
