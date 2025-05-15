@@ -2,211 +2,224 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>ODTÜ-İVMER ENTROPİ DUVARI</title>
+  <title>ODTÜ-İVMER Entropi Duvarı</title>
   <style>
+    /* Matrix background */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background: black;
-      color: #000;
+      color: #111;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
 
-    .matrix-bg {
+    canvas {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
       z-index: 0;
-      background: black;
-      overflow: hidden;
     }
 
-    .container {
+    .content {
       position: relative;
       z-index: 1;
+      background-color: white;
+      color: #000;
       max-width: 900px;
-      background: white;
-      padding: 40px;
-      margin: 60px auto;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin: auto;
+      padding: 60px 30px;
+      border-radius: 10px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 200px;
+    }
+
+    .main-image {
+      display: block;
+      margin: 40px auto;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .section-spacer {
+      margin-top: 60px;
+      margin-bottom: 60px;
     }
 
     h1, h2 {
-      color: darkred;
       text-align: center;
+      color: #b30000;
     }
 
     ul {
-      margin-bottom: 30px;
-    }
-
-    li {
-      margin-bottom: 8px;
+      line-height: 1.6;
     }
 
     .lang-toggle {
       text-align: center;
-      margin-bottom: 20px;
+      margin-top: 30px;
     }
 
     .lang-toggle button {
-      margin: 0 10px;
       padding: 8px 16px;
-      font-weight: bold;
+      margin: 0 5px;
       border: none;
-      border-radius: 5px;
-      background-color: darkred;
+      background: #b30000;
       color: white;
       cursor: pointer;
+      border-radius: 6px;
     }
 
-    img.logo {
-      width: 180px;
-      display: block;
-      margin: 30px auto 10px;
+    .lang-toggle button:hover {
+      background: #800000;
     }
 
-    img.main-image {
-      display: block;
-      margin: 40px auto 0;
-      max-width: 100%;
-      border-radius: 10px;
+    @media only screen and (max-width: 768px) {
+      .content {
+        margin: 30px 10px;
+        padding: 30px 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <canvas class="matrix-bg" id="matrixCanvas"></canvas>
+  <canvas id="matrixCanvas"></canvas>
 
-  <div class="container">
-    <img src="logo_ivmer_slider.png" alt="İVMER Logo" class="logo">
-    <h1 id="main-title">ODTÜ-İVMER ENTROPİ DUVARI</h1>
+  <div class="content">
+    <img src="logo_ivmer_slider.png" alt="IVMER Logo" class="logo">
+    <h1 id="main-title">ODTÜ-İVMER Entropi Duvarı</h1>
+
+    <img src="signal-2025-05-15-113519_002.jpeg" alt="Görsel" class="main-image">
+
+    <div class="section-spacer"></div>
+
+    <section id="content-tr">
+      <h2>Kriptografi ve Rassal Sayılar</h2>
+      <ul>
+        <li><strong>Veri güvenliği</strong>, teknolojinin gelişmesiyle kritik bir alan haline gelmiştir.</li>
+        <li><strong>Kriptografi</strong>, bilgiyi şifreleme ile korur.</li>
+        <li>Bilgi türleri:
+          <ul>
+            <li><em>Akan Veriler:</em> Anlık iletimde olan bilgiler.</li>
+            <li><em>Depolanan Veriler:</em> Sabit sürücülerde veya bulutta bulunan bilgiler.</li>
+          </ul>
+        </li>
+        <li><strong>Anahtarlar</strong>, verilere yalnızca yetkili kişilerin erişmesini sağlar.</li>
+        <li>Güçlü anahtarlar için rastgele sayılar gereklidir. Asal sayılar artık yeterince güçlü değil.</li>
+        <li>Rassal sayı üretiminde kaynaklar:
+          <ul>
+            <li><strong>Kaotik Sistemler:</strong> İlk durumu bilinmeyen karmaşık fiziksel sistemler.</li>
+            <li><strong>Kuantum Süreçleri:</strong> Gerçek rastgeleliği sağlayan atom altı süreçler.</li>
+            <li><strong>Donanımsal Kaynaklar:</strong> Gelişmiş entropi jeneratörleri (örneğin radyoaktif bozunum veya termal gürültü).</li>
+          </ul>
+        </li>
+        <li><strong>Entropi Duvarı</strong>, kaotik fiziksel süreçlerden rassal sayı üretir.</li>
+      </ul>
+
+      <h2>Anahtar Yönetiminin Önemi</h2>
+      <ul>
+        <li><strong>Şifreleme algoritmaları</strong> anahtarsız çalışmaz.</li>
+        <li>Güçlü anahtarlar, saldırılara karşı dirençli sistemler sağlar.</li>
+        <li>Rassallığı düşük anahtarlar kolayca tahmin edilebilir.</li>
+        <li>Yüksek entropili anahtarlar, siber güvenliğin temelidir.</li>
+      </ul>
+
+      <h2>Kaotik Sistemlerin Rolü</h2>
+      <ul>
+        <li>Kaotik sistemler, başlangıç verisine aşırı duyarlıdır.</li>
+        <li>Tahmin edilmesi çok zor olduğu için rastgelelik üretimi için uygundur.</li>
+        <li>Matematiksel olarak determinist ama davranış olarak karmaşıktır.</li>
+      </ul>
+    </section>
+
+    <section id="content-en" style="display:none;">
+      <h2>Cryptography and Random Numbers</h2>
+      <ul>
+        <li><strong>Data security</strong> has become a vital area as technology advances.</li>
+        <li><strong>Cryptography</strong> protects data through encryption methods.</li>
+        <li>Data types:
+          <ul>
+            <li><em>Data in Transit:</em> Information being transmitted in real-time.</li>
+            <li><em>Data at Rest:</em> Information stored on drives or cloud services.</li>
+          </ul>
+        </li>
+        <li><strong>Keys</strong> allow only authorized parties to access the data.</li>
+        <li>Random numbers are critical for key generation. Traditional primes are no longer strong enough.</li>
+        <li>Sources of randomness:
+          <ul>
+            <li><strong>Chaotic Systems:</strong> Complex systems with unpredictable behavior.</li>
+            <li><strong>Quantum Processes:</strong> Atom-level uncertainty-based randomness.</li>
+            <li><strong>Hardware Sources:</strong> Entropy from thermal noise or radioactive decay.</li>
+          </ul>
+        </li>
+        <li>The <strong>Entropy Wall</strong> is a physical device generating randomness from chaotic dynamics.</li>
+      </ul>
+
+      <h2>Importance of Key Management</h2>
+      <ul>
+        <li><strong>Encryption algorithms</strong> require keys to function.</li>
+        <li>Strong keys resist cryptanalysis and intrusion.</li>
+        <li>Low-entropy keys are predictable and insecure.</li>
+        <li>High-quality randomness is the foundation of cyber security.</li>
+      </ul>
+
+      <h2>Role of Chaotic Systems</h2>
+      <ul>
+        <li>Chaotic systems are sensitive to initial states.</li>
+        <li>They behave unpredictably and are suitable for randomness generation.</li>
+        <li>Though deterministic, their output is hard to simulate or anticipate.</li>
+      </ul>
+    </section>
 
     <div class="lang-toggle">
       <button onclick="showContent('tr')">Türkçe</button>
       <button onclick="showContent('en')">English</button>
     </div>
-
-    <!-- Türkçe İçerik -->
-    <section id="content-tr" class="content-section">
-      <h2>Kriptografi ve Rassal Sayılar Hakkında</h2>
-      <ul>
-        <li><strong>Veri güvenliği</strong>, teknolojinin gelişmesiyle daha da kritik bir hale gelmiştir. Kullanıcıların kolaylığı artarken, kötü niyetli saldırganların yöntemleri de gelişmektedir.</li>
-        <li><strong>Kriptografi</strong>, bilgiyi korumak için şifreleme yöntemleri geliştirir ve güvenliği sağlar.</li>
-        <li>Korunması gereken veriler:
-          <ul>
-            <li><em>Akan Veriler:</em> Ağ üzerinden iletilen veriler.</li>
-            <li><em>Depolanan Veriler:</em> Disklerde veya bulut sistemlerinde tutulan bilgiler.</li>
-          </ul>
-        </li>
-        <li><strong>Anahtarlar</strong>, sadece yetkili kişilerin bilgiye erişmesini sağlar ve şifreleme sistemlerinin temelidir.</li>
-        <li>Geleneksel asal sayılarla üretilen anahtarlar günümüzde bilgisayar gücünün artmasıyla zayıflamaktadır.</li>
-        <li>Bu nedenle güçlü ve rastgele üretilmiş <strong>anahtarlar</strong> kullanılmalıdır.</li>
-        <li><strong>Rassal sayı üretimi</strong> için farklı yöntemler vardır:
-          <ul>
-            <li><strong>Kaotik Sistemler:</strong> Fiziksel sistemlerden elde edilen ve deterministik olsa da tahmin edilemeyen yapılar.</li>
-            <li><strong>Kuantum Sistemleri:</strong> Gerçek fiziksel rastgelelik barındıran yapılar.</li>
-            <li><strong>Donanımsal RNG'ler:</strong> Örneğin lav lambaları, atmosferik gürültü gibi kaynaklar.</li>
-          </ul>
-        </li>
-        <li><strong>Entropi Duvarı</strong>, fiziksel bir kaotik kaynaktan rassal sayı üretir ve bu sayılar kriptografik anahtar üretiminde kullanılır.</li>
-      </ul>
-
-      <h2>Anahtar Kullanımının Önemi</h2>
-      <ul>
-        <li>Güçlü anahtarlar sistemlerin güvenliğini sağlar.</li>
-        <li>Zayıf anahtarlar veri sızıntılarına neden olabilir.</li>
-        <li>Rassal ve tekrar edilemeyen anahtar üretimi, güvenliğin temel taşıdır.</li>
-      </ul>
-
-      <h2>Kaotik Sistemler Kriptografide Neden Kullanılır?</h2>
-      <ul>
-        <li>Başlangıç koşullarına aşırı duyarlı olduklarından öngörülemezdirler.</li>
-        <li>Bilinen fiziksel sistemlerden gelen veriler ile yazılımda kullanılabilir rastgelelik sağlarlar.</li>
-        <li>Kriptografik RNG sistemlerinde entropi kaynağı olarak kullanılırlar.</li>
-      </ul>
-    </section>
-
-    <!-- English Content -->
-    <section id="content-en" class="content-section" style="display:none;">
-      <h2>About Cryptography and Random Numbers</h2>
-      <ul>
-        <li><strong>Data security</strong> has become increasingly critical with advancing technology. While users benefit from accessibility, malicious actors also grow stronger.</li>
-        <li><strong>Cryptography</strong> develops encryption techniques to protect sensitive data.</li>
-        <li>Types of data needing protection:
-          <ul>
-            <li><em>Data in Transit:</em> Sent over networks.</li>
-            <li><em>Data at Rest:</em> Stored on disks or cloud infrastructure.</li>
-          </ul>
-        </li>
-        <li><strong>Keys</strong> are the foundation of secure systems and restrict access to authorized users only.</li>
-        <li>Classical prime-number-based keys are weakening with increasing computational power.</li>
-        <li>Therefore, strong and unpredictable <strong>random keys</strong> must be used.</li>
-        <li>Random numbers can be generated by:
-          <ul>
-            <li><strong>Chaotic Systems:</strong> Deterministic yet practically unpredictable sources.</li>
-            <li><strong>Quantum Systems:</strong> Truly random events based on quantum mechanics.</li>
-            <li><strong>Hardware RNGs:</strong> Examples include lava lamps and atmospheric noise.</li>
-          </ul>
-        </li>
-        <li>The <strong>Entropy Wall</strong> is a system that generates true random numbers from a chaotic source and is used in cryptographic applications.</li>
-      </ul>
-
-      <h2>The Importance of Key Usage</h2>
-      <ul>
-        <li>Strong keys ensure secure systems.</li>
-        <li>Weak or predictable keys may lead to data breaches.</li>
-        <li>Keys must be generated randomly and reliably.</li>
-      </ul>
-
-      <h2>Why Use Chaotic Systems in Cryptography?</h2>
-      <ul>
-        <li>They are extremely sensitive to initial conditions, making them unpredictable.</li>
-        <li>They can provide hardware-based entropy to improve randomness in software.</li>
-        <li>They are suitable as entropy sources for cryptographic RNG systems.</li>
-      </ul>
-    </section>
-
-    <img src="signal-2025-05-15-113519_002.jpeg" alt="Ana Görsel" class="main-image">
   </div>
 
   <script>
     function showContent(lang) {
-      document.getElementById("content-tr").style.display = lang === 'tr' ? "block" : "none";
-      document.getElementById("content-en").style.display = lang === 'en' ? "block" : "none";
-      document.getElementById("main-title").textContent =
-        lang === 'tr' ? "ODTÜ-İVMER ENTROPİ DUVARI" : "METU-İVMER ENTROPY WALL";
+      document.getElementById("content-tr").style.display = lang === "tr" ? "block" : "none";
+      document.getElementById("content-en").style.display = lang === "en" ? "block" : "none";
+      document.getElementById("main-title").innerText = lang === "tr" ? "ODTÜ-İVMER Entropi Duvarı" : "METU-İVMER Entropy Wall";
     }
 
-    // Matrix background animation
+    // Matrix animation
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
 
-    const cols = canvas.width / 20;
-    const drops = Array.from({ length: cols }, () => 1);
+    const matrixChars = "01";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array.from({ length: columns }, () => 1);
 
     function drawMatrix() {
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#0F0";
-      ctx.font = "16px monospace";
+      ctx.fillStyle = "#00FF00";
+      ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < drops.length; i++) {
-        const text = Math.random() > 0.5 ? "0" : "1";
-        ctx.fillText(text, i * 20, drops[i] * 20);
-        if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+        const text = matrixChars.charAt(Math.floor(Math.random() * matrixChars.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
         drops[i]++;
       }
     }
 
-    setInterval(drawMatrix, 50);
+    setInterval(drawMatrix, 33);
   </script>
 </body>
 </html>
+
 
